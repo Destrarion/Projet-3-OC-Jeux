@@ -8,6 +8,10 @@
 
 /* Begin PBXBuildFile section */
 		B40609E920C81CE00063C4E5 /* main.swift in Sources */ = {isa = PBXBuildFile; fileRef = B40609E820C81CE00063C4E5 /* main.swift */; };
+		B439C56120C91E6D00D7C5C8 /* Fighter.swift in Sources */ = {isa = PBXBuildFile; fileRef = B439C56020C91E6D00D7C5C8 /* Fighter.swift */; };
+		B439C56320C923CA00D7C5C8 /* Collosus.swift in Sources */ = {isa = PBXBuildFile; fileRef = B439C56220C923CA00D7C5C8 /* Collosus.swift */; };
+		B439C56520C923DB00D7C5C8 /* Mage.swift in Sources */ = {isa = PBXBuildFile; fileRef = B439C56420C923DB00D7C5C8 /* Mage.swift */; };
+		B439C56720C923EF00D7C5C8 /* Dwarf.swift in Sources */ = {isa = PBXBuildFile; fileRef = B439C56620C923EF00D7C5C8 /* Dwarf.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -25,6 +29,10 @@
 /* Begin PBXFileReference section */
 		B40609E520C81CE00063C4E5 /* Premier jeux */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = "Premier jeux"; sourceTree = BUILT_PRODUCTS_DIR; };
 		B40609E820C81CE00063C4E5 /* main.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = main.swift; sourceTree = "<group>"; };
+		B439C56020C91E6D00D7C5C8 /* Fighter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Fighter.swift; sourceTree = "<group>"; };
+		B439C56220C923CA00D7C5C8 /* Collosus.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Collosus.swift; sourceTree = "<group>"; };
+		B439C56420C923DB00D7C5C8 /* Mage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Mage.swift; sourceTree = "<group>"; };
+		B439C56620C923EF00D7C5C8 /* Dwarf.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Dwarf.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -58,6 +66,10 @@
 			isa = PBXGroup;
 			children = (
 				B40609E820C81CE00063C4E5 /* main.swift */,
+				B439C56020C91E6D00D7C5C8 /* Fighter.swift */,
+				B439C56220C923CA00D7C5C8 /* Collosus.swift */,
+				B439C56420C923DB00D7C5C8 /* Mage.swift */,
+				B439C56620C923EF00D7C5C8 /* Dwarf.swift */,
 			);
 			path = "Premier jeux";
 			sourceTree = "<group>";
@@ -119,7 +131,11 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				B439C56320C923CA00D7C5C8 /* Collosus.swift in Sources */,
 				B40609E920C81CE00063C4E5 /* main.swift in Sources */,
+				B439C56720C923EF00D7C5C8 /* Dwarf.swift in Sources */,
+				B439C56120C91E6D00D7C5C8 /* Fighter.swift in Sources */,
+				B439C56520C923DB00D7C5C8 /* Mage.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

@@ -8,5 +8,18 @@
 
 import Foundation
 
-print("Hello, World!")
+
+class GlobalClass {
+    var name : String
+    var lifepoint : Int
+    var strenghtAtk : Int
+    
+    init (name : String, lifepoint : Int, strenghtAtk : Int) {
+        self.name = name
+        self.lifepoint = lifepoint
+        self.strenghtAtk = strenghtAtk
+    }
+    
+    
+}
 
