@@ -8,7 +8,7 @@
 
 import Foundation
 
-class Collosus : GlobalClass {
+class Collosus : Character {
     override init(name : String, lifepoint : Int, strenghtAtk : Int) {
         
         super.init(name: name, lifepoint: lifepoint, strenghtAtk: strenghtAtk)

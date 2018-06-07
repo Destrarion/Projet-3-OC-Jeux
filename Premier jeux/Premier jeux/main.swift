@@ -9,17 +9,10 @@
 import Foundation
 
 
-class GlobalClass {
-    var name : String
-    var lifepoint : Int
-    var strenghtAtk : Int
-    
-    init (name : String, lifepoint : Int, strenghtAtk : Int) {
-        self.name = name
-        self.lifepoint = lifepoint
-        self.strenghtAtk = strenghtAtk
-    }
-    
-    
-}
+var gimly = Dwarf (name : "Gimly")
 
+var balrogue = Collosus (name : "Balrogue")
+
+gimly.atkfunction(target: balrogue, caster: gimly)
+
+print("\(balrogue.lifepoint) ")

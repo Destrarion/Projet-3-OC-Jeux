@@ -1,5 +1,5 @@
 //
-//  Fighter.swift
+//  Dwarf.swift
 //  Premier jeux
 //
 //  Created by ADMINISTRATEUR on 07/06/2018.
@@ -8,15 +8,14 @@
 
 import Foundation
 
-
-class Fighter : GlobalClass {
-    
+class Dwarf : Character{
     override init(name : String, lifepoint : Int, strenghtAtk : Int) {
         
         super.init(name: name, lifepoint: lifepoint, strenghtAtk: strenghtAtk)
     }
     convenience init (name : String) {
-        self.init(name : name ,lifepoint: 100, strenghtAtk: 10 )
+        self.init(name : name ,lifepoint: 65, strenghtAtk: 25 )
     }
+    
     
 }

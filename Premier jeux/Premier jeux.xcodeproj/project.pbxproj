@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		B40609E920C81CE00063C4E5 /* main.swift in Sources */ = {isa = PBXBuildFile; fileRef = B40609E820C81CE00063C4E5 /* main.swift */; };
+		B427224B20C98378004DAC26 /* Character.swift in Sources */ = {isa = PBXBuildFile; fileRef = B427224A20C98378004DAC26 /* Character.swift */; };
 		B439C56120C91E6D00D7C5C8 /* Fighter.swift in Sources */ = {isa = PBXBuildFile; fileRef = B439C56020C91E6D00D7C5C8 /* Fighter.swift */; };
 		B439C56320C923CA00D7C5C8 /* Collosus.swift in Sources */ = {isa = PBXBuildFile; fileRef = B439C56220C923CA00D7C5C8 /* Collosus.swift */; };
 		B439C56520C923DB00D7C5C8 /* Mage.swift in Sources */ = {isa = PBXBuildFile; fileRef = B439C56420C923DB00D7C5C8 /* Mage.swift */; };
@@ -29,6 +30,7 @@
 /* Begin PBXFileReference section */
 		B40609E520C81CE00063C4E5 /* Premier jeux */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = "Premier jeux"; sourceTree = BUILT_PRODUCTS_DIR; };
 		B40609E820C81CE00063C4E5 /* main.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = main.swift; sourceTree = "<group>"; };
+		B427224A20C98378004DAC26 /* Character.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Character.swift; sourceTree = "<group>"; };
 		B439C56020C91E6D00D7C5C8 /* Fighter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Fighter.swift; sourceTree = "<group>"; };
 		B439C56220C923CA00D7C5C8 /* Collosus.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Collosus.swift; sourceTree = "<group>"; };
 		B439C56420C923DB00D7C5C8 /* Mage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Mage.swift; sourceTree = "<group>"; };
@@ -50,7 +52,6 @@
 			isa = PBXGroup;
 			children = (
 				B40609E720C81CE00063C4E5 /* Premier jeux */,
-				B40609E620C81CE00063C4E5 /* Products */,
 			);
 			sourceTree = "<group>";
 		};
@@ -60,18 +61,29 @@
 				B40609E520C81CE00063C4E5 /* Premier jeux */,
 			);
 			name = Products;
+			path = ../..;
 			sourceTree = "<group>";
 		};
 		B40609E720C81CE00063C4E5 /* Premier jeux */ = {
 			isa = PBXGroup;
 			children = (
 				B40609E820C81CE00063C4E5 /* main.swift */,
-				B439C56020C91E6D00D7C5C8 /* Fighter.swift */,
-				B439C56220C923CA00D7C5C8 /* Collosus.swift */,
-				B439C56420C923DB00D7C5C8 /* Mage.swift */,
-				B439C56620C923EF00D7C5C8 /* Dwarf.swift */,
+				B427224920C9829D004DAC26 /* People */,
 			);
 			path = "Premier jeux";
+			sourceTree = "<group>";
+		};
+		B427224920C9829D004DAC26 /* People */ = {
+			isa = PBXGroup;
+			children = (
+				B427224A20C98378004DAC26 /* Character.swift */,
+				B439C56020C91E6D00D7C5C8 /* Fighter.swift */,
+				B439C56420C923DB00D7C5C8 /* Mage.swift */,
+				B439C56620C923EF00D7C5C8 /* Dwarf.swift */,
+				B439C56220C923CA00D7C5C8 /* Collosus.swift */,
+				B40609E620C81CE00063C4E5 /* Products */,
+			);
+			path = People;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -134,6 +146,7 @@
 				B439C56320C923CA00D7C5C8 /* Collosus.swift in Sources */,
 				B40609E920C81CE00063C4E5 /* main.swift in Sources */,
 				B439C56720C923EF00D7C5C8 /* Dwarf.swift in Sources */,
+				B427224B20C98378004DAC26 /* Character.swift in Sources */,
 				B439C56120C91E6D00D7C5C8 /* Fighter.swift in Sources */,
 				B439C56520C923DB00D7C5C8 /* Mage.swift in Sources */,
 			);

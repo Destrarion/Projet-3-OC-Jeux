@@ -1,5 +1,5 @@
 //
-//  Dwarf.swift
+//  Mage.swift
 //  Premier jeux
 //
 //  Created by ADMINISTRATEUR on 07/06/2018.
@@ -8,14 +8,13 @@
 
 import Foundation
 
-class Dwarf : GlobalClass{
+class Mage : Character{
     override init(name : String, lifepoint : Int, strenghtAtk : Int) {
         
         super.init(name: name, lifepoint: lifepoint, strenghtAtk: strenghtAtk)
     }
     convenience init (name : String) {
-        self.init(name : name ,lifepoint: 65, strenghtAtk: 25 )
+        self.init(name : name ,lifepoint: 85, strenghtAtk: 15 )
     }
-    
     
 }
