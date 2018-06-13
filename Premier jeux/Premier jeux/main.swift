@@ -16,3 +16,5 @@ var balrogue = Collosus (name : "Balrogue")
 gimly.atkfunction(target: balrogue, caster: gimly)
 
 print("\(balrogue.lifepoint) ")
+
+
