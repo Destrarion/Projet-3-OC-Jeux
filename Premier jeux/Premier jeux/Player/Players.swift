@@ -9,15 +9,10 @@
 import Foundation
 
 class Player {
-    var name : String 
+    var name : String = ""
     var listOfCharacter : [Character] = []
     
-    init (name : String){
-        self.name = name
-    }
-    convenience init (){
-        self.init(name: "")
-    }
+    
     func addNamePlayer () {
         print("Hello new player. Select your name")
         if let namePlayer = readLine(){
@@ -43,26 +38,32 @@ class Player {
                 let characterName = readLine()
                 let newCharacter = Fighter (name : characterName!)
                 listOfCharacter.append(newCharacter)
+                print("\(characterName!)as joined your rank")
             case "2":
                 print("You have choosen the Mage to heal your rank ! How you want to name him ?")
                 let characterName = readLine()
                 let newCharacter = Mage (name : characterName!)
                 listOfCharacter.append(newCharacter)
+                print("\(characterName!)as joined your rank")
             case "3":
                 print("You have choosen the Dwarf in your rank to kill your ennemy ! How do you name him ?")
                 let characterName = readLine()
                 let newCharacter = Fighter (name : characterName!)
                 listOfCharacter.append(newCharacter)
+                print("\(characterName!)as joined your rank")
             case "4":
                 print("You have choosen a Collosus to protect your rank ! How would you like to name him ?")
                 let characterName = readLine()
                 let newCharacter = Fighter (name : characterName!)
                 listOfCharacter.append(newCharacter)
-            default : print("Vous n'avez pas choisis de personnage.")
+                print("\(characterName!)as joined your rank")
+            default : print("You haven't selected character yet.")
+                
                     }
             
                 }
             }
+            print("Your team is now ready for a fight !")
         }
     }
 

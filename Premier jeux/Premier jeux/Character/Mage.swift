@@ -16,5 +16,7 @@ class Mage : Character{
     convenience init (name : String) {
         self.init(name : name ,lifepoint: 85, strenghtAtk: 15 )
     }
-    
+    override func atkfunction(target: Character, caster: Character) {
+        target.lifepoint += caster.strenghtAtk
+    }
 }

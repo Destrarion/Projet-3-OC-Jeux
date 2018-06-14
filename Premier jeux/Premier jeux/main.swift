@@ -18,7 +18,10 @@ gimly.atkfunction(target: balrogue, caster: gimly)
 print("\(balrogue.lifepoint) ")
 
 
-var player1 = Player (name: "Player1")
+var player1 = Player()
+
 
 player1.addNamePlayer()
 player1.pickingCharacter()
+
+
