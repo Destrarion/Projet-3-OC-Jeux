@@ -24,4 +24,11 @@ var player1 = Player()
 player1.addNamePlayer()
 player1.pickingCharacter()
 
+var player2 = Player()
 
+player2.addNamePlayer()
+player2.pickingCharacter()
+
+print(player2.listOfCharacter)
+
+RoundAtkFuction()
