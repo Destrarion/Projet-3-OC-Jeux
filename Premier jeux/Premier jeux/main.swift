@@ -31,4 +31,8 @@ player2.pickingCharacter()
 
 print(player2.listOfCharacter)
 
+
+player1.listOfCharacter[0].atkfunction(target: player2.listOfCharacter[0], caster: player1.listOfCharacter[0])
+print(player2.listOfCharacter[0].lifepoint)
+
 RoundAtkFuction()

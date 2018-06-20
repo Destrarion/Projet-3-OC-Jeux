@@ -48,13 +48,13 @@ public class Player {
             case "3":
                 print("You have choosen the Dwarf in your rank to kill your ennemy ! How do you name him ?")
                 let characterName = readLine()
-                let newCharacter = Fighter (name : characterName!)
+                let newCharacter = Dwarf (name : characterName!)
                 listOfCharacter.append(newCharacter)
                 print("\(characterName!) as joined your rank")
             case "4":
                 print("You have choosen a Collosus to protect your rank ! How would you like to name him ?")
                 let characterName = readLine()
-                let newCharacter = Fighter (name : characterName!)
+                let newCharacter = Collosus (name : characterName!)
                 listOfCharacter.append(newCharacter)
                 print("\(characterName!) as joined your rank")
             default : print("You haven't selected character yet.")
@@ -62,8 +62,12 @@ public class Player {
                     }
             
                 }
+            print("You got \(listOfCharacter.count) character in your team, \(self.name)")
+            
             }
             print("Your team is now ready for a fight !")
         }
+    
+    
     }
 

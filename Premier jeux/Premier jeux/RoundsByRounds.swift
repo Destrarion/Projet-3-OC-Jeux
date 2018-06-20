@@ -8,10 +8,28 @@
 
 import Foundation
 
+
 func RoundAtkFuction () {
-   // player1.listOfCharacter(1) chosis d' atk le readline de l'équipe d'en face
-    print("Which ennemy want to atk with \(player1.listOfCharacter[1])?"
-        + "\n1. \(player2.listOfCharacter[1])"
-        + "\n2. \(player2.listOfCharacter[2])"
-        + "\n3. \(player2.listOfCharacter[3])")//Error message : Thread 1: Fatal error: Index out of range
+    // player1.listOfCharacter(1) chosis d' atk le readline de l'équipe d'en face
+    print("Which ennemy want to atk with \(player1.listOfCharacter[0])?"
+        + "\n1. \(player2.listOfCharacter[0].name)"
+        + "\n2. \(player2.listOfCharacter[1].name)"
+        + "\n3. \(player2.listOfCharacter[2].name)")
+    
+    if let choiceAtk = readLine(){
+        switch choiceAtk {
+        case "1" : player1.listOfCharacter[0].atkfunction(target: player2.listOfCharacter[0], caster: player1.listOfCharacter[0])
+        print("\(player2.listOfCharacter[0].name) as taken \(player1.listOfCharacter[0].strenghtAtk) and now" + "\(player2.listOfCharacter[0].name) got \(player2.listOfCharacter[0].lifepoint)")
+            
+        case "2" : player1.listOfCharacter[0].atkfunction(target: player2.listOfCharacter[1], caster: player1.listOfCharacter[0])
+        print("\(player2.listOfCharacter[1].name) as taken \(player1.listOfCharacter[0].strenghtAtk) and now" + "\(player2.listOfCharacter[1].name) got \(player2.listOfCharacter[1].lifepoint)")
+            
+        case "3" : player1.listOfCharacter[0].atkfunction(target: player2.listOfCharacter[2], caster: player1.listOfCharacter[0])
+        print("\(player2.listOfCharacter[2].name) as taken \(player1.listOfCharacter[0].strenghtAtk) and now" + "\(player2.listOfCharacter[2].name) got \(player2.listOfCharacter[2].lifepoint)")
+            
+        default:
+            print("You haven't choose someone to attack. You must atk one of your ennemy with")
+            RoundAtkFuction()
+        }
+    }
 }
