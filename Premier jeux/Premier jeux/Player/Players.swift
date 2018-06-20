@@ -29,13 +29,15 @@ public class Player {
         + "\n4. A Collosus")
             
         // loop for choosing 3 of character
-            
+            // add while instead
         for _ in 0..<3 {
             if let choice = readLine(){
             switch choice {
             case "1":
                 print("You have choosen the Fighter to fight in your rank ! How do you name him ?")
                 let characterName = readLine()
+                // while truc !=  the same name of intel
+                // don't add name
                 let newCharacter = Fighter (name : characterName!)
                 listOfCharacter.append(newCharacter)
                 print("\(characterName!) as joined your rank")
@@ -58,7 +60,7 @@ public class Player {
                 listOfCharacter.append(newCharacter)
                 print("\(characterName!) as joined your rank")
             default : print("You haven't selected character yet.")
-                
+
                     }
             
                 }
