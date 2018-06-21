@@ -30,7 +30,8 @@ public class Player {
             
         // loop for choosing 3 of character
             // add while instead
-        for _ in 0..<3 {
+        var countCharacter = 0
+        while countCharacter < 3{
             if let choice = readLine(){
             switch choice {
             case "1":
@@ -41,24 +42,28 @@ public class Player {
                 let newCharacter = Fighter (name : characterName!)
                 listOfCharacter.append(newCharacter)
                 print("\(characterName!) as joined your rank")
+                countCharacter += 1
             case "2":
                 print("You have choosen the Mage to heal your rank ! How you want to name him ?")
                 let characterName = readLine()
                 let newCharacter = Mage (name : characterName!)
                 listOfCharacter.append(newCharacter)
                 print("\(characterName!) as joined your rank")
+                countCharacter += 1
             case "3":
                 print("You have choosen the Dwarf in your rank to kill your ennemy ! How do you name him ?")
                 let characterName = readLine()
                 let newCharacter = Dwarf (name : characterName!)
                 listOfCharacter.append(newCharacter)
                 print("\(characterName!) as joined your rank")
+                countCharacter += 1
             case "4":
                 print("You have choosen a Collosus to protect your rank ! How would you like to name him ?")
                 let characterName = readLine()
                 let newCharacter = Collosus (name : characterName!)
                 listOfCharacter.append(newCharacter)
                 print("\(characterName!) as joined your rank")
+                countCharacter += 1
             default : print("You haven't selected character yet.")
 
                     }
