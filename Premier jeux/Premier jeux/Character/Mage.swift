@@ -19,4 +19,6 @@ class Mage : Character{
     override func atkfunction(target: Character, caster: Character) {
         target.lifepoint += caster.strenghtAtk
     }
+    
+    
 }

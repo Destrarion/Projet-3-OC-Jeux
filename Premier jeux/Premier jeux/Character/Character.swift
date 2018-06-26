@@ -21,4 +21,8 @@ class Character {
     func atkfunction (target: Character, caster : Character){
         target.lifepoint -= caster.strenghtAtk
     }
+
+    
+    
+    
 }
