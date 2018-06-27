@@ -41,60 +41,140 @@ public class Player {
                     let newCharacter = Fighter (name : characterName!)
                     listOfCharacter.append(newCharacter)
                     print("\(characterName!) as joined your rank")
-                    print(newCharacter.name)
                     countCharacter += 1
                 }
                 else{
-                for _ in listOfCharacter {
-                    print(listOfCharacter[0].name)
-                    if  characterName == listOfCharacter[0].name {
-                        print("ce nom est déjà pris")
-                    }
-                    else if characterName == listOfCharacter[1].name{
-                        print("ce nom est déjà pris")
-                    }
-                        else if characterName == listOfCharacter[2].name {
+                    for _ in listOfCharacter {
+                        if  characterName == listOfCharacter[0].name {
                             print("ce nom est déjà pris")
                         }
-                        else{
+                        else if countCharacter == 2 {
+                            if characterName == listOfCharacter[1].name{
+                                print("ce nom est déjà pris")
+                            }
+                        }
+                        else if countCharacter == 3{
+                            if characterName == listOfCharacter[2].name {
+                                print("ce nom est déjà pris")
+                            }
+                        }
+                        else {
                             let newCharacter = Fighter (name : characterName!)
                             listOfCharacter.append(newCharacter)
                             print("\(characterName!) as joined your rank")
-                            print(newCharacter.name)
                             countCharacter += 1
                         }
                     }
                 }
-                
-                
                 
                
                 
             case "2":
                 print("You have choosen the Mage to heal your rank ! How you want to name him ?")
                 let characterName = readLine()
-                let newCharacter = Mage (name : characterName!)
-                listOfCharacter.append(newCharacter)
-                print("\(characterName!) as joined your rank")
-                countCharacter += 1
+                if listOfCharacter.isEmpty == true {
+                    let newCharacter = Mage (name : characterName!)
+                    listOfCharacter.append(newCharacter)
+                    print("\(characterName!) as joined your rank")
+                    countCharacter += 1
+                }
+                else{
+                    for _ in listOfCharacter {
+                        
+                        if  characterName == listOfCharacter[0].name {
+                            print("ce nom est déjà pris")
+                        }
+                        else if countCharacter == 2 {
+                            if characterName == listOfCharacter[1].name{
+                                print("ce nom est déjà pris")
+                            }
+                        }
+                        else if countCharacter == 3{
+                            if characterName == listOfCharacter[2].name {
+                                print("ce nom est déjà pris")
+                            }
+                        }
+                            
+                        else{
+                            let newCharacter = Mage (name : characterName!)
+                            listOfCharacter.append(newCharacter)
+                            print("\(characterName!) as joined your rank")
+                            countCharacter += 1
+                        }
+                    }
+                }
                 
                 
             case "3":
                 print("You have choosen the Dwarf in your rank to kill your ennemy ! How do you name him ?")
                 let characterName = readLine()
-                let newCharacter = Dwarf (name : characterName!)
-                listOfCharacter.append(newCharacter)
-                print("\(characterName!) as joined your rank")
-                countCharacter += 1
-               
+                if listOfCharacter.isEmpty == true {
+                    let newCharacter = Dwarf (name : characterName!)
+                    listOfCharacter.append(newCharacter)
+                    print("\(characterName!) as joined your rank")
+                    countCharacter += 1
+                }
+                else{
+                    for _ in listOfCharacter {
+                        for _ in listOfCharacter {
+                            
+                            if  characterName == listOfCharacter[0].name {
+                                print("ce nom est déjà pris")
+                            }
+                            else if countCharacter == 2 {
+                                if characterName == listOfCharacter[1].name{
+                                    print("ce nom est déjà pris")
+                                }
+                            }
+                            else if countCharacter == 3{
+                                if characterName == listOfCharacter[2].name {
+                                    print("ce nom est déjà pris")
+                                }
+                            }
+                                
+                            else{
+                                let newCharacter = Dwarf (name : characterName!)
+                                listOfCharacter.append(newCharacter)
+                                print("\(characterName!) as joined your rank")
+                                countCharacter += 1
+                            }
+                        }
+                    }
+                }
                 
             case "4":
                 print("You have choosen a Collosus to protect your rank ! How would you like to name him ?")
                 let characterName = readLine()
-                let newCharacter = Collosus (name : characterName!)
-                listOfCharacter.append(newCharacter)
-                print("\(characterName!) as joined your rank")
-                countCharacter += 1
+                if listOfCharacter.isEmpty == true {
+                    let newCharacter = Collosus (name : characterName!)
+                    listOfCharacter.append(newCharacter)
+                    print("\(characterName!) as joined your rank")
+                    countCharacter += 1
+                }
+                else{
+                    for _ in listOfCharacter {
+                        if  characterName == listOfCharacter[0].name {
+                            print("ce nom est déjà pris")
+                        }
+                        else if countCharacter == 2 {
+                            if characterName == listOfCharacter[1].name{
+                                print("ce nom est déjà pris")
+                            }
+                        }
+                        else if countCharacter == 3{
+                            if characterName == listOfCharacter[2].name {
+                                print("ce nom est déjà pris")
+                            }
+                        }
+                            
+                        else{
+                            let newCharacter = Collosus (name : characterName!)
+                            listOfCharacter.append(newCharacter)
+                            print("\(characterName!) as joined your rank")
+                            countCharacter += 1
+                        }
+                    }
+                }
                 
             default : print("You haven't selected character yet.")
 
