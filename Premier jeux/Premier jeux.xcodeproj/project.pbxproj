@@ -13,7 +13,6 @@
 		B439C56320C923CA00D7C5C8 /* Collosus.swift in Sources */ = {isa = PBXBuildFile; fileRef = B439C56220C923CA00D7C5C8 /* Collosus.swift */; };
 		B439C56520C923DB00D7C5C8 /* Mage.swift in Sources */ = {isa = PBXBuildFile; fileRef = B439C56420C923DB00D7C5C8 /* Mage.swift */; };
 		B439C56720C923EF00D7C5C8 /* Dwarf.swift in Sources */ = {isa = PBXBuildFile; fileRef = B439C56620C923EF00D7C5C8 /* Dwarf.swift */; };
-		B4DDA10A20D7FBCE00B00F1D /* RoundsByRounds.swift in Sources */ = {isa = PBXBuildFile; fileRef = B4DDA10920D7FBCE00B00F1D /* RoundsByRounds.swift */; };
 		B4EF8A2220C98B9C000D0971 /* Players.swift in Sources */ = {isa = PBXBuildFile; fileRef = B4EF8A2120C98B9C000D0971 /* Players.swift */; };
 /* End PBXBuildFile section */
 
@@ -37,7 +36,6 @@
 		B439C56220C923CA00D7C5C8 /* Collosus.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Collosus.swift; sourceTree = "<group>"; };
 		B439C56420C923DB00D7C5C8 /* Mage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Mage.swift; sourceTree = "<group>"; };
 		B439C56620C923EF00D7C5C8 /* Dwarf.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Dwarf.swift; sourceTree = "<group>"; };
-		B4DDA10920D7FBCE00B00F1D /* RoundsByRounds.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RoundsByRounds.swift; sourceTree = "<group>"; };
 		B4EF8A2120C98B9C000D0971 /* Players.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Players.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -72,7 +70,6 @@
 			isa = PBXGroup;
 			children = (
 				B40609E820C81CE00063C4E5 /* main.swift */,
-				B4DDA10920D7FBCE00B00F1D /* RoundsByRounds.swift */,
 				B4EF8A2020C98B84000D0971 /* Player */,
 				B411281C20CAB1FD00310F7A /* Character */,
 			);
@@ -156,7 +153,6 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				B4DDA10A20D7FBCE00B00F1D /* RoundsByRounds.swift in Sources */,
 				B439C56320C923CA00D7C5C8 /* Collosus.swift in Sources */,
 				B40609E920C81CE00063C4E5 /* main.swift in Sources */,
 				B439C56720C923EF00D7C5C8 /* Dwarf.swift in Sources */,
