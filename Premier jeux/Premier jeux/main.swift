@@ -10,4 +10,6 @@ import Foundation
 
 var player1 = Player()
 
+player1.addNamePlayer()
 player1.pickingCharacter()
+
