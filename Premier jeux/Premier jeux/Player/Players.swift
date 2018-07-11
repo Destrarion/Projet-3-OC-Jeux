@@ -29,7 +29,6 @@ public class Player {
             return false
         }else{
             Player.namecheckavailaible.append(characterName.lowercased())
-            print(Player.namecheckavailaible)
             
             
             return true
@@ -59,6 +58,7 @@ public class Player {
                     let newCharacter = Fighter (name: characterName!)
                     listOfCharacter.append(newCharacter)
                      countCharacter += 1
+                    print("You got \(listOfCharacter.count) character in your team, \(self.name)")
                 }
                
                 
@@ -69,6 +69,7 @@ public class Player {
                     let newCharacter = Mage (name: characterName!)
                     listOfCharacter.append(newCharacter)
                      countCharacter += 1
+                    print("You got \(listOfCharacter.count) character in your team, \(self.name)")
                 }
                 
                 
@@ -79,6 +80,7 @@ public class Player {
                     let newCharacter = Dwarf (name: characterName!)
                     listOfCharacter.append(newCharacter)
                      countCharacter += 1
+                    print("You got \(listOfCharacter.count) character in your team, \(self.name)")
                 }
                 
             case "4":
@@ -88,19 +90,49 @@ public class Player {
                     let newCharacter = Collosus (name: characterName!)
                     listOfCharacter.append(newCharacter)
                     countCharacter += 1
+                    print("You got \(listOfCharacter.count) character in your team, \(self.name)")
                 }
                 
             default : print("You haven't selected character yet.")
 
                     }
             
-                }
-            print("You got \(listOfCharacter.count) character in your team, \(self.name)")
+            }
             
             }
+            
             print("Your team is now ready for a fight !")
         }
-
     
+    func atkChooseFunction(player : Player , ennemyPlayer : Player ) {
+        var loopturnatk = 0
+        while loopturnatk < 3 {
+        print("\(player), your \(player.listOfCharacter[loopturnatk].name)is ready to attack ! Which ennemy want you to strike ?"
+            + "\n1. \(ennemyPlayer.listOfCharacter[0].name)"
+            + "\n1. \(ennemyPlayer.listOfCharacter[1].name)"
+            + "\n1. \(ennemyPlayer.listOfCharacter[2].name)"
+            )
+        
+        if let choiceDestinationAtk = readLine() {
+        switch choiceDestinationAtk {
+        case "1":
+            player.listOfCharacter[loopturnatk].atkfunction(target: ennemyPlayer.listOfCharacter[0] , caster: player.listOfCharacter[loopturnatk])
+            loopturnatk += 1
+        case "2":
+            player.listOfCharacter[loopturnatk].atkfunction(target: ennemyPlayer.listOfCharacter[1] , caster: player.listOfCharacter[loopturnatk])
+            loopturnatk += 1
+        case "3":
+            player.listOfCharacter[loopturnatk].atkfunction(target: ennemyPlayer.listOfCharacter[2] , caster: player.listOfCharacter[loopturnatk])
+            loopturnatk += 1
+        
+        default : print ("vous n'avez pas choisis de cible à attaquer")
+        
+        }
+        
+        }
+        
+        
+        }
+        
     }
-
+}
