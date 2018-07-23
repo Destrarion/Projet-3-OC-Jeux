@@ -104,35 +104,33 @@ public class Player {
             print("Your team is now ready for a fight !")
         }
     
-    func atkChooseFunction(player : Player , ennemyPlayer : Player ) {
-        var loopturnatk = 0
-        while loopturnatk < 3 {
-        print("\(player), your \(player.listOfCharacter[loopturnatk].name)is ready to attack ! Which ennemy want you to strike ?"
-            + "\n1. \(ennemyPlayer.listOfCharacter[0].name)"
-            + "\n1. \(ennemyPlayer.listOfCharacter[1].name)"
-            + "\n1. \(ennemyPlayer.listOfCharacter[2].name)"
-            )
-        
-        if let choiceDestinationAtk = readLine() {
-        switch choiceDestinationAtk {
-        case "1":
-            player.listOfCharacter[loopturnatk].atkfunction(target: ennemyPlayer.listOfCharacter[0] , caster: player.listOfCharacter[loopturnatk])
-            loopturnatk += 1
-        case "2":
-            player.listOfCharacter[loopturnatk].atkfunction(target: ennemyPlayer.listOfCharacter[1] , caster: player.listOfCharacter[loopturnatk])
-            loopturnatk += 1
-        case "3":
-            player.listOfCharacter[loopturnatk].atkfunction(target: ennemyPlayer.listOfCharacter[2] , caster: player.listOfCharacter[loopturnatk])
-            loopturnatk += 1
-        
-        default : print ("vous n'avez pas choisis de cible à attaquer")
-        
+    func selectCharacter() -> Character{
+        let selected = false
+        var selectedCharacter = Character(name: "", lifepoint: 0, strenghtAtk: 0)
+        print("Select your character by is name, \(name)")
+        for character in listOfCharacter{
+            print (character.name, ": Lifepoint: ", character.lifepoint,"Power :", character.strenghtAtk)
         }
+        let choiceCharacter = readLine()
+        while !selected {
+        switch choiceCharacter {
+            
+        case "\(listOfCharacter[0].name)" : selectedCharacter = listOfCharacter[0]
+            return selectedCharacter
+            
+        case "\(listOfCharacter[1].name)" : selectedCharacter = listOfCharacter[1]
+            return selectedCharacter
         
-        }
-        
-        
+        case "\(listOfCharacter[2].name)" : selectedCharacter = listOfCharacter[2]
+            return selectedCharacter
+            
+        default : print("You haven't selected a character")
+            }
         }
         
     }
+    
+   
+
+    
 }

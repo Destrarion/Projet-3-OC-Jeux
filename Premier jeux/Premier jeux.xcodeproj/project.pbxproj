@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		B40609E920C81CE00063C4E5 /* main.swift in Sources */ = {isa = PBXBuildFile; fileRef = B40609E820C81CE00063C4E5 /* main.swift */; };
+		B40D7A4820FF50CA00C8ADCF /* Game.swift in Sources */ = {isa = PBXBuildFile; fileRef = B40D7A4720FF50CA00C8ADCF /* Game.swift */; };
 		B427224B20C98378004DAC26 /* Character.swift in Sources */ = {isa = PBXBuildFile; fileRef = B427224A20C98378004DAC26 /* Character.swift */; };
 		B439C56120C91E6D00D7C5C8 /* Fighter.swift in Sources */ = {isa = PBXBuildFile; fileRef = B439C56020C91E6D00D7C5C8 /* Fighter.swift */; };
 		B439C56320C923CA00D7C5C8 /* Collosus.swift in Sources */ = {isa = PBXBuildFile; fileRef = B439C56220C923CA00D7C5C8 /* Collosus.swift */; };
@@ -31,6 +32,7 @@
 /* Begin PBXFileReference section */
 		B40609E520C81CE00063C4E5 /* Premier jeux */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = "Premier jeux"; sourceTree = BUILT_PRODUCTS_DIR; };
 		B40609E820C81CE00063C4E5 /* main.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = main.swift; sourceTree = "<group>"; };
+		B40D7A4720FF50CA00C8ADCF /* Game.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Game.swift; sourceTree = "<group>"; };
 		B427224A20C98378004DAC26 /* Character.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Character.swift; sourceTree = "<group>"; };
 		B439C56020C91E6D00D7C5C8 /* Fighter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Fighter.swift; sourceTree = "<group>"; };
 		B439C56220C923CA00D7C5C8 /* Collosus.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Collosus.swift; sourceTree = "<group>"; };
@@ -70,6 +72,7 @@
 			isa = PBXGroup;
 			children = (
 				B40609E820C81CE00063C4E5 /* main.swift */,
+				B40D7A4720FF50CA00C8ADCF /* Game.swift */,
 				B4EF8A2020C98B84000D0971 /* Player */,
 				B411281C20CAB1FD00310F7A /* Character */,
 			);
@@ -160,6 +163,7 @@
 				B427224B20C98378004DAC26 /* Character.swift in Sources */,
 				B439C56120C91E6D00D7C5C8 /* Fighter.swift in Sources */,
 				B439C56520C923DB00D7C5C8 /* Mage.swift in Sources */,
+				B40D7A4820FF50CA00C8ADCF /* Game.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

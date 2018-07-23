@@ -20,5 +20,4 @@ class Mage : Character{
         target.lifepoint += caster.strenghtAtk
     }
     
-    
 }
