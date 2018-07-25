@@ -11,3 +11,7 @@ import Foundation
 var jeux = Game()
 
 print("Hello world!")
+
+jeux.teamCreation()
+jeux.teamCreation()
+jeux.attack(player: jeux.listOfPlayer[0], ennemyPlayer: jeux.listOfPlayer[1])

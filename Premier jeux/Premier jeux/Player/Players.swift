@@ -112,8 +112,9 @@ public class Player {
             print (character.name, ": Lifepoint: ", character.lifepoint,"Power :", character.strenghtAtk)
         }
         let choiceCharacter = readLine()
+        let trimmed = choiceCharacter?.trimmingCharacters(in: .whitespacesAndNewlines)
         while !selected {
-        switch choiceCharacter {
+        switch trimmed {
             
         case "\(listOfCharacter[0].name)" : selectedCharacter = listOfCharacter[0]
             return selectedCharacter
@@ -125,7 +126,7 @@ public class Player {
             return selectedCharacter
             
         default : print("You haven't selected a character")
-            }
+            
         }
         
     }
@@ -133,4 +134,5 @@ public class Player {
    
 
     
+    }
 }
