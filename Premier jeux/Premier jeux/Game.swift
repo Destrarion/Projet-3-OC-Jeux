@@ -29,16 +29,22 @@ class Game{
     
     // décide quel ennemie va se faire attaquer
         if let decision = readLine(){
+            let trimmeddecision = decision.trimmingCharacters(in: .whitespacesAndNewlines).lowercased()
             let choosen : Character = player.selectCharacter()
     // partie du personnage qui attaque
-            switch decision{
+            switch trimmeddecision{
             case "1" :
                 choosen.atkfunction(target:ennemyPlayer.listOfCharacter[0], caster: choosen)
+                print("\(ennemyPlayer.listOfCharacter[0].name) taken \(choosen.strenghtAtk) damage and have now \(ennemyPlayer.listOfCharacter[0].lifepoint) lifepoint")
                 
             case "2" :
                  choosen.atkfunction(target:ennemyPlayer.listOfCharacter[1], caster:  choosen)
+                 print("\(ennemyPlayer.listOfCharacter[1].name) taken \(choosen.strenghtAtk) damage and have now \(ennemyPlayer.listOfCharacter[1].lifepoint) lifepoint")
+                
             case "3" :
                  choosen.atkfunction(target:ennemyPlayer.listOfCharacter[2], caster:  choosen)
+                 print("\(ennemyPlayer.listOfCharacter[2].name) taken \(choosen.strenghtAtk) damage and have now \(ennemyPlayer.listOfCharacter[2].lifepoint) lifepoint")
+                
             default:
                 print("You haven't choosen a ennemy to kill.")
             }

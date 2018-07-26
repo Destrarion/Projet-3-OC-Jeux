@@ -24,13 +24,14 @@ public class Player {
     }
     
     func addMembres ( _ characterName : String) -> Bool {
-        if Player.namecheckavailaible.contains(characterName.lowercased()){
+        let trimmeredCharacterName = characterName.trimmingCharacters(in: .whitespacesAndNewlines)
+        if Player.namecheckavailaible.contains(trimmeredCharacterName.lowercased()){
             print("nom déjà utilisé")
             return false
         }else{
-            Player.namecheckavailaible.append(characterName.lowercased())
+            Player.namecheckavailaible.append(trimmeredCharacterName.lowercased())
             
-            
+            // let trimmed = characterName?.trimmingCharacters(in: .whitespacesAndNewlines).lowercased()
             return true
         }
     }
@@ -53,7 +54,7 @@ public class Player {
                 
             case "1":
                 print("You have choosen the Fighter to fight in your rank ! How do you name him ?")
-                let characterName = readLine()
+                let characterName = readLine()?.lowercased().trimmingCharacters(in: .whitespacesAndNewlines)
                 if addMembres(characterName!){
                     let newCharacter = Fighter (name: characterName!)
                     listOfCharacter.append(newCharacter)
@@ -64,7 +65,7 @@ public class Player {
                 
             case "2":
                 print("You have choosen the Mage to heal your rank ! How you want to name him ?")
-                let characterName = readLine()
+                let characterName = readLine()?.lowercased().trimmingCharacters(in: .whitespacesAndNewlines)
                 if addMembres(characterName!){
                     let newCharacter = Mage (name: characterName!)
                     listOfCharacter.append(newCharacter)
@@ -75,7 +76,7 @@ public class Player {
                 
             case "3":
                 print("You have choosen the Dwarf in your rank to kill your ennemy ! How do you name him ?")
-                let characterName = readLine()
+                let characterName = readLine()?.lowercased().trimmingCharacters(in: .whitespacesAndNewlines)
                 if addMembres(characterName!){
                     let newCharacter = Dwarf (name: characterName!)
                     listOfCharacter.append(newCharacter)
@@ -85,7 +86,7 @@ public class Player {
                 
             case "4":
                 print("You have choosen a Collosus to protect your rank ! How would you like to name him ?")
-                let characterName = readLine()
+                let characterName = readLine()?.lowercased().trimmingCharacters(in: .whitespacesAndNewlines)
                 if addMembres(characterName!){
                     let newCharacter = Collosus (name: characterName!)
                     listOfCharacter.append(newCharacter)
@@ -112,7 +113,7 @@ public class Player {
             print (character.name, ": Lifepoint: ", character.lifepoint,"Power :", character.strenghtAtk)
         }
         let choiceCharacter = readLine()
-        let trimmed = choiceCharacter?.trimmingCharacters(in: .whitespacesAndNewlines)
+        let trimmed = choiceCharacter?.trimmingCharacters(in: .whitespacesAndNewlines).lowercased()
         while !selected {
         switch trimmed {
             
@@ -126,7 +127,7 @@ public class Player {
             return selectedCharacter
             
         default : print("You haven't selected a character")
-            
+                  selectCharacter()
         }
         
     }
