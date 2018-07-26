@@ -33,15 +33,15 @@ class Game{
             let choosen : Character = player.selectCharacter()
     // partie du personnage qui attaque
             switch trimmeddecision{
-            case "1" :
+            case "\(ennemyPlayer.listOfCharacter[0].name)" :
                 choosen.atkfunction(target:ennemyPlayer.listOfCharacter[0], caster: choosen)
                 print("\(ennemyPlayer.listOfCharacter[0].name) taken \(choosen.strenghtAtk) damage and have now \(ennemyPlayer.listOfCharacter[0].lifepoint) lifepoint")
                 
-            case "2" :
+            case "\(ennemyPlayer.listOfCharacter[1].name)" :
                  choosen.atkfunction(target:ennemyPlayer.listOfCharacter[1], caster:  choosen)
                  print("\(ennemyPlayer.listOfCharacter[1].name) taken \(choosen.strenghtAtk) damage and have now \(ennemyPlayer.listOfCharacter[1].lifepoint) lifepoint")
                 
-            case "3" :
+            case "\(ennemyPlayer.listOfCharacter[2].name)" :
                  choosen.atkfunction(target:ennemyPlayer.listOfCharacter[2], caster:  choosen)
                  print("\(ennemyPlayer.listOfCharacter[2].name) taken \(choosen.strenghtAtk) damage and have now \(ennemyPlayer.listOfCharacter[2].lifepoint) lifepoint")
                 
