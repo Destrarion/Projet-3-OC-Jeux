@@ -22,6 +22,17 @@ class Character {
         target.lifepoint -= caster.strenghtAtk
     }
     
+    func isUnderZeroLifepoint(player : Player, character : Character) {
+        if character.lifepoint <= 0 {
+            for _ in player.listOfCharacter {
+                var numbercheckinlist = 0
+                if player.listOfCharacter[numbercheckinlist].name == character.name{
+                    player.listOfCharacter.remove(at: numbercheckinlist)
+                }
+                numbercheckinlist += 1
+            }
+        }
+    }
     
     
 }
