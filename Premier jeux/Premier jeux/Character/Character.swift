@@ -23,11 +23,14 @@ class Character {
     }
     
     func isUnderZeroLifepoint(player : Player, character : Character) {
+        
         if character.lifepoint <= 0 {
+            print("\(character.name)")
+            var numbercheckinlist = 0
             for _ in player.listOfCharacter {
-                var numbercheckinlist = 0
                 if player.listOfCharacter[numbercheckinlist].name == character.name{
                     player.listOfCharacter.remove(at: numbercheckinlist)
+                    print("character removed")
                 }
                 numbercheckinlist += 1
             }

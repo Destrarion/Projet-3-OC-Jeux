@@ -8,11 +8,7 @@
 
 import Foundation
 
-var jeux = Game()
+let jeux = Game()
+jeux.startingGame()
 
-print("Hello world!")
-
-jeux.teamCreation()
-jeux.teamCreation()
-jeux.attack(player: jeux.listOfPlayer[0], ennemyPlayer: jeux.listOfPlayer[1])
 
