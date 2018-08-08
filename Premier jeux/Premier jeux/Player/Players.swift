@@ -107,7 +107,6 @@ public class Player {
     
     func selectCharacter() -> Character{
         let selected = false
-        var selectedCharacter = Character(name: "", lifepoint: 0, strenghtAtk: 0)
         print("Select your character by is name, \(name)")
         for character in listOfCharacter{
             print (character.name, ": Lifepoint: ", character.lifepoint,"Power :", character.strenghtAtk)
@@ -115,25 +114,28 @@ public class Player {
         let choiceCharacter = readLine()
         let trimmed = choiceCharacter?.trimmingCharacters(in: .whitespacesAndNewlines).lowercased()
         while !selected {
-        switch trimmed {
-            
-        case "\(listOfCharacter[0].name)" : selectedCharacter = listOfCharacter[0]
-            return selectedCharacter
-            
-        case "\(listOfCharacter[1].name)" : selectedCharacter = listOfCharacter[1]
-            return selectedCharacter
-        
-        case "\(listOfCharacter[2].name)" : selectedCharacter = listOfCharacter[2]
-            return selectedCharacter
-            
-        default : print("You haven't selected a character")
-                  selectCharacter()
+        let character = getcharacter(player: self, character: trimmed!)
+            if let thereischaracter = character{
+                return thereischaracter
+            }
+            else{
+                print("there is no character named like you are written, reselect your selection")
+                return selectCharacter()
+            }
         }
         
     }
-        
-   
-
+        func getcharacter (player : Player, character : String) -> Character?{
+         var numberchecklist = 0
+            for _ in player.listOfCharacter{
+                if player.listOfCharacter[numberchecklist].name == character{
+                    return player.listOfCharacter[numberchecklist]
+                    
+                }
+            numberchecklist += 1
+            }
+            return nil
+        }
     
     }
-}
+

@@ -18,8 +18,8 @@ class Character {
         self.lifepoint = lifepoint
         self.strenghtAtk = strenghtAtk
     }
-    func atkfunction (target: Character, caster : Character){
-        target.lifepoint -= caster.strenghtAtk
+    func atkfunction (target: Character){
+        target.lifepoint -= self.strenghtAtk
     }
     
     func isUnderZeroLifepoint(player : Player, character : Character) {
@@ -31,10 +31,13 @@ class Character {
                 if player.listOfCharacter[numbercheckinlist].name == character.name{
                     player.listOfCharacter.remove(at: numbercheckinlist)
                     print("character removed")
+                    break
                 }
                 numbercheckinlist += 1
             }
         }
+        
+        
     }
     
     
