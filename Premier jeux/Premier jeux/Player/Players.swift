@@ -107,7 +107,7 @@ public class Player {
     
     func selectCharacter() -> Character{
         let selected = false
-        print("Select your character by is name, \(name)")
+        print("Select character by is name")
         for character in listOfCharacter{
             print (character.name, ": Lifepoint: ", character.lifepoint,"Power :", character.strenghtAtk)
         }
@@ -137,5 +137,5 @@ public class Player {
             return nil
         }
     
-    }
 
+}

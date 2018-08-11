@@ -30,7 +30,7 @@ class Character {
             for _ in player.listOfCharacter {
                 if player.listOfCharacter[numbercheckinlist].name == character.name{
                     player.listOfCharacter.remove(at: numbercheckinlist)
-                    print("character removed")
+                    print("\(character.name) die in the battlefield with honor to defend his people")
                     break
                 }
                 numbercheckinlist += 1
