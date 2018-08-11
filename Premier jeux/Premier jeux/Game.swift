@@ -101,19 +101,19 @@ class Game{
             for character in ennemyPlayer.listOfCharacter {
                 print("\(character.name), \(character.lifepoint)lifepoint, \(character.strenghtAtk)attack power.")
             }
-            if let ennemytargetted = readLine(){
-                let trimmedennemytargetted = ennemytargetted.trimmingCharacters(in: .whitespacesAndNewlines).lowercased()
-                if let theEnnemytargetted = ennemyPlayer.getcharacter(player: ennemyPlayer, character: trimmedennemytargetted){
-                    choosen.atkfunction(target: theEnnemytargetted)
-                    print("\(String(describing: theEnnemytargetted.name)) taken \(choosen.strenghtAtk) damage and have now \(String(describing: theEnnemytargetted.lifepoint))")
-                    theEnnemytargetted.isUnderZeroLifepoint(player: ennemyPlayer, character: theEnnemytargetted)
-                }
-                }
+            // la personne choisis le personnage à cibler
+            let ennemytargetted = ennemyPlayer.selectCharacter()
+                    //le personnage choisis attaque donc le personnage cibler
+                    choosen.atkfunction(target: ennemytargetted)
+                    print("\(String(describing: ennemytargetted.name)) taken \(choosen.strenghtAtk) damage and have now \(String(describing: ennemytargetted.lifepoint))")
+                    ennemytargetted.isUnderZeroLifepoint(player: ennemyPlayer, character: ennemytargetted)
+                    }
+                
             }
             
         
-        }
 }
+
     
     
 
