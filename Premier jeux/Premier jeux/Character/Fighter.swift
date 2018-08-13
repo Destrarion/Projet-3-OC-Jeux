@@ -11,12 +11,12 @@ import Foundation
 
 class Fighter : Character {
     
-    override init(name : String, lifepoint : Int, strenghtAtk : Int) {
+    override init(name : String, lifepoint : Int, strenghtAtk : Int , weaponequiped : Weapon) {
         
-        super.init(name: name, lifepoint: lifepoint, strenghtAtk: strenghtAtk)
+        super.init(name: name, lifepoint: lifepoint, strenghtAtk: strenghtAtk,  weaponequiped : weaponequiped)
     }
-    convenience init (name : String) {
-        self.init(name : name ,lifepoint: 100, strenghtAtk: 10 )
+    convenience init (name : String , weaponequiped : Weapon) {
+        self.init(name : name ,lifepoint: 100, strenghtAtk: 10 ,weaponequiped : weaponequiped)
     }
     
 }

@@ -12,11 +12,13 @@ class Character {
     var name : String
     var lifepoint : Int
     var strenghtAtk : Int
+    var weaponequiped : Weapon
     
-    init (name : String, lifepoint : Int, strenghtAtk : Int){
+    init (name : String, lifepoint : Int, strenghtAtk : Int, weaponequiped : Weapon){
         self.name = name
         self.lifepoint = lifepoint
         self.strenghtAtk = strenghtAtk
+        self.weaponequiped = weaponequiped
     }
     func atkfunction (target: Character){
         target.lifepoint -= self.strenghtAtk
