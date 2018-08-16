@@ -20,8 +20,9 @@ class Character {
         self.strenghtAtk = strenghtAtk
         self.weaponequiped = weaponequiped
     }
+    
     func atkfunction (target: Character){
-        target.lifepoint -= self.strenghtAtk
+        target.lifepoint -= self.strenghtAtk + weaponequiped.stats
     }
     
     func isUnderZeroLifepoint(player : Player, character : Character) {

@@ -14,6 +14,7 @@
 		B439C56320C923CA00D7C5C8 /* Collosus.swift in Sources */ = {isa = PBXBuildFile; fileRef = B439C56220C923CA00D7C5C8 /* Collosus.swift */; };
 		B439C56520C923DB00D7C5C8 /* Mage.swift in Sources */ = {isa = PBXBuildFile; fileRef = B439C56420C923DB00D7C5C8 /* Mage.swift */; };
 		B439C56720C923EF00D7C5C8 /* Dwarf.swift in Sources */ = {isa = PBXBuildFile; fileRef = B439C56620C923EF00D7C5C8 /* Dwarf.swift */; };
+		B4B2C1232125CD7700E5D2A0 /* Chest.swift in Sources */ = {isa = PBXBuildFile; fileRef = B4B2C1222125CD7700E5D2A0 /* Chest.swift */; };
 		B4CEDFB72121E93B007DC14A /* Weapon.swift in Sources */ = {isa = PBXBuildFile; fileRef = B4CEDFB62121E93B007DC14A /* Weapon.swift */; };
 		B4EF8A2220C98B9C000D0971 /* Players.swift in Sources */ = {isa = PBXBuildFile; fileRef = B4EF8A2120C98B9C000D0971 /* Players.swift */; };
 /* End PBXBuildFile section */
@@ -39,6 +40,7 @@
 		B439C56220C923CA00D7C5C8 /* Collosus.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Collosus.swift; sourceTree = "<group>"; };
 		B439C56420C923DB00D7C5C8 /* Mage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Mage.swift; sourceTree = "<group>"; };
 		B439C56620C923EF00D7C5C8 /* Dwarf.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Dwarf.swift; sourceTree = "<group>"; };
+		B4B2C1222125CD7700E5D2A0 /* Chest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Chest.swift; sourceTree = "<group>"; };
 		B4CEDFB62121E93B007DC14A /* Weapon.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Weapon.swift; sourceTree = "<group>"; };
 		B4EF8A2120C98B9C000D0971 /* Players.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Players.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -75,6 +77,7 @@
 			children = (
 				B40609E820C81CE00063C4E5 /* main.swift */,
 				B40D7A4720FF50CA00C8ADCF /* Game.swift */,
+				B4B2C1222125CD7700E5D2A0 /* Chest.swift */,
 				B4EF8A2020C98B84000D0971 /* Player */,
 				B411281C20CAB1FD00310F7A /* Character */,
 				B4CEDFB52121E8A6007DC14A /* Weapon */,
@@ -176,6 +179,7 @@
 				B439C56520C923DB00D7C5C8 /* Mage.swift in Sources */,
 				B40D7A4820FF50CA00C8ADCF /* Game.swift in Sources */,
 				B4CEDFB72121E93B007DC14A /* Weapon.swift in Sources */,
+				B4B2C1232125CD7700E5D2A0 /* Chest.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

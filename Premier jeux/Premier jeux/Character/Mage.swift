@@ -13,11 +13,11 @@ class Mage : Character{
         
         super.init(name: name, lifepoint: lifepoint, strenghtAtk: strenghtAtk, weaponequiped : weaponequiped)
     }
-    convenience init (name : String, weaponequiped : Weapon) {
-        self.init(name : name ,lifepoint: 85, strenghtAtk: 15 , weaponequiped : weaponequiped)
+    convenience init (name : String) {
+        self.init(name : name ,lifepoint: 85, strenghtAtk: 15 , weaponequiped : none)
     }
     override func atkfunction(target: Character) {
-        target.lifepoint += self.strenghtAtk
+        target.lifepoint += self.strenghtAtk + weaponequiped.stats
     }
     
 }

@@ -13,8 +13,8 @@ class Dwarf : Character{
         
         super.init(name: name, lifepoint: lifepoint, strenghtAtk: strenghtAtk,weaponequiped : weaponequiped)
     }
-    convenience init (name : String, weaponequiped : Weapon) {
-        self.init(name : name ,lifepoint: 65, strenghtAtk: 55, weaponequiped : weaponequiped )
+    convenience init (name : String) {
+        self.init(name : name ,lifepoint: 65, strenghtAtk: 55, weaponequiped : none )
     }
     
     

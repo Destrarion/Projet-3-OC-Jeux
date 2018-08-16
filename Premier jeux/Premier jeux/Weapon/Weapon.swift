@@ -14,3 +14,4 @@ class Weapon {
         self.stats = stats
     }
 }
+ var none = Weapon (stats: 0)

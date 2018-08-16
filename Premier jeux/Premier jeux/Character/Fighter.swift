@@ -15,8 +15,8 @@ class Fighter : Character {
         
         super.init(name: name, lifepoint: lifepoint, strenghtAtk: strenghtAtk,  weaponequiped : weaponequiped)
     }
-    convenience init (name : String , weaponequiped : Weapon) {
-        self.init(name : name ,lifepoint: 100, strenghtAtk: 10 ,weaponequiped : weaponequiped)
+    convenience init (name : String) {
+        self.init(name : name ,lifepoint: 100, strenghtAtk: 10 ,weaponequiped : none)
     }
     
 }
