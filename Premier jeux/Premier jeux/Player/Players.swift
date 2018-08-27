@@ -97,7 +97,6 @@ public class Player {
             default : print("You haven't selected character yet.")
 
                     }
-            
             }
             
             }
@@ -109,7 +108,7 @@ public class Player {
         let selected = false
         print("Select character by is name")
         for character in listOfCharacter{
-            print (character.name, ": Lifepoint: ", character.lifepoint,"Power :", character.strenghtAtk)
+            print (character.name, ": Lifepoint: ", character.lifepoint,"Power :", character.strenghtAtk + character.weaponequiped.stats)
         }
         let choiceCharacter = readLine()
         let trimmed = choiceCharacter?.trimmingCharacters(in: .whitespacesAndNewlines).lowercased()

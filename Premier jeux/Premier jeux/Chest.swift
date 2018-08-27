@@ -10,16 +10,30 @@ import Foundation
 
 // classe impactant le coffre avant le combat
 class Chest {
-    let allWeapon : [Weapon] = []
+    static let allWeapon : [Weapon] = [axeOfTheMountain,swordOfThunder,staffOfTheHeaven]
     var weaponlooted : Weapon
     
     init (weaponlooted : Weapon){
         self.weaponlooted = weaponlooted
     }
+    //fonction qui découvre l'arme dans le coffre
+    func gettingObjectFromChest (character : Character) -> Weapon {
+        if character is Mage {
+                let random = Int(arc4random_uniform(UInt32(Chest.allWeapon.count)))
+            weaponlooted = Chest.allWeapon[random]
+            if weaponlooted is Staff{
+                    return weaponlooted
+                }
+            else{
+                return gettingObjectFromChest(character: character)
+            }
+        }
+                let random = Int(arc4random_uniform(UInt32(Chest.allWeapon.count)))
+                weaponlooted = Chest.allWeapon[random]
+                return weaponlooted
+        }
+        
     
-    func gettingObjectFromChest () -> Weapon {
-        let random = Int(arc4random_uniform(UInt32(allWeapon.count)))
-        weaponlooted = allWeapon[random]
-        return weaponlooted
-    }
 }
+
+var chest = Chest (weaponlooted: none)
