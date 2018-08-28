@@ -59,13 +59,6 @@ class Game{
             
             chestSpawn(character: choosen, weaponInTheChest: chest.gettingObjectFromChest(character : choosen))
         }
-        // sortie de l'arme du coffre SI executé
-        
-            //proposition de l'arme
-        
-        
-        
-        
         // vérification si un mage ou non
             // cas du mage
         if let mage = choosen as? Mage {
@@ -78,30 +71,26 @@ class Game{
             // cas non mage
         else{
             print("There's Unwanted ennemy ! Wich enemy you want to kill it first ?")
-            for character in ennemyPlayer.listOfCharacter {
-                print("\(character.name), \(character.lifepoint)lifepoint, \(character.strenghtAtk + character.weaponequiped.stats)attack power.")
-            }
             // la personne choisis le personnage à cibler
             let ennemytargetted = ennemyPlayer.selectCharacter()
                     //le personnage choisis attaque donc le personnage cibler
                     choosen.atkfunction(target: ennemytargetted)
 // a ajouter les stats de l'arme sur les dégats subis, ici compter seulement les dégats de base du personnage
-                    print("\(String(describing: ennemytargetted.name)) taken \(choosen.strenghtAtk) damage and have now \(String(describing: ennemytargetted.lifepoint))")
+                    print("\(String(describing: ennemytargetted.name)) taken \(choosen.strenghtAtk+choosen.weaponequiped.stats) damage and have now \(String(describing: ennemytargetted.lifepoint))")
                     ennemytargetted.isUnderZeroLifepoint(player: ennemyPlayer, character: ennemytargetted)
                     }
-                
             }
     func chestSpawn (character : Character, weaponInTheChest : Weapon){
                 
         print("We've found \(weaponInTheChest.name)with \(weaponInTheChest.stats) stats in the chest !")
-        print("Did you want to equip to your character ? Actual weapon equiped : \(weaponInTheChest.name) stats : \(weaponInTheChest.stats)")
+        print("Did you want to equip to your character ? Actual weapon equiped : \(character.weaponequiped.name) stats : \(character.weaponequiped.stats)")
         if let answer = readLine(){
             switch answer {
             case "yes" : print("choose your character you want to equip this weapon :")
                         character.weaponequiped = weaponInTheChest
                        print("\(character.name) as now equiped \(character.weaponequiped.name)")
                 
-            case "no" : print("\(weaponInTheChest.name) as been throw away)")
+            case "no" : print("\(weaponInTheChest.name) as been throw away")
                 
             default:
                 print("Choose one of this 2 case")
