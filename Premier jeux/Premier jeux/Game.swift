@@ -94,7 +94,7 @@ class Game{
     func chestSpawn (character : Character, weaponInTheChest : Weapon){
                 
         print("We've found \(weaponInTheChest.name)with \(weaponInTheChest.stats) stats in the chest !")
-        print("Did you want to equip to one of your character ?")
+        print("Did you want to equip to your character ? Actual weapon equiped : \(weaponInTheChest.name) stats : \(weaponInTheChest.stats)")
         if let answer = readLine(){
             switch answer {
             case "yes" : print("choose your character you want to equip this weapon :")

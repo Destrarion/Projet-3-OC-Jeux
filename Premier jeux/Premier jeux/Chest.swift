@@ -28,10 +28,14 @@ class Chest {
                 return gettingObjectFromChest(character: character)
             }
         }
-                let random = Int(arc4random_uniform(UInt32(Chest.allWeapon.count)))
-                weaponlooted = Chest.allWeapon[random]
-                return weaponlooted
+        let random = Int(arc4random_uniform(UInt32(Chest.allWeapon.count)))
+        weaponlooted = Chest.allWeapon[random]
+        if weaponlooted is Staff{
+            return gettingObjectFromChest(character: character)
+        }else{
+            return weaponlooted
         }
+    }
         
     
 }
