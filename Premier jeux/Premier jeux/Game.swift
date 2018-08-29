@@ -29,7 +29,6 @@ class Game{
     func turnPerTurn(player1 : Player, player2 : Player){
         var gameEnd = false
         while gameEnd == false{
-            // ce chestspawn doit etre dans la fonction attack
             attack2(player: player1, ennemyPlayer: player2)
             if player1.listOfCharacter.count == 0 || player2.listOfCharacter.count == 0 {
                 gameEnd = true
@@ -42,20 +41,18 @@ class Game{
                 print("Game Over")
                 break
             }
-        print(player1.listOfCharacter.count , player2.listOfCharacter.count)
         }
     }
     
     func attack2(player : Player, ennemyPlayer : Player){
         print("\(player.name), It's your turn to play ")
         // choix du personnage du joueur
-            // readline et récupération avec (selectcharacter() dans le fichier Player)
             let choosen = player.selectCharacter()
     // Apparition du coffre
             // variable de probabilité
-        let probabilité = arc4random_uniform(UInt32(4))
+        let probability = arc4random_uniform(UInt32(4))
             // apparition du coffre selon la probabilité
-        if probabilité == UInt32(1) {
+        if probability == UInt32(1) {
             
             chestSpawn(character: choosen, weaponInTheChest: chest.gettingObjectFromChest(character : choosen))
         }

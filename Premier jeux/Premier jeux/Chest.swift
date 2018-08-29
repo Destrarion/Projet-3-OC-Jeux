@@ -23,7 +23,7 @@ class Chest {
             weaponlooted = Chest.allWeapon[random]
             if weaponlooted is Staff{
                     return weaponlooted
-                }
+            }
             else{
                 return gettingObjectFromChest(character: character)
             }
