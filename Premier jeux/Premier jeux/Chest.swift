@@ -16,7 +16,7 @@ class Chest {
     init (weaponlooted : Weapon){
         self.weaponlooted = weaponlooted
     }
-    //fonction qui découvre l'arme dans le coffre
+    //function for discovering the weapon in the chest
     func gettingObjectFromChest (character : Character) -> Weapon {
         if character is Mage {
                 let random = Int(arc4random_uniform(UInt32(Chest.allWeapon.count)))

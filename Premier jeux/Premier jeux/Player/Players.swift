@@ -30,8 +30,6 @@ public class Player {
             return false
         }else{
             Player.namecheckavailaible.append(trimmeredCharacterName.lowercased())
-            
-            // let trimmed = characterName?.trimmingCharacters(in: .whitespacesAndNewlines).lowercased()
             return true
         }
     }

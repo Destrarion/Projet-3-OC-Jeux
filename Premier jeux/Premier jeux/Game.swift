@@ -46,18 +46,18 @@ class Game{
     
     func attack2(player : Player, ennemyPlayer : Player){
         print("\(player.name), It's your turn to play ")
-        // choix du personnage du joueur
+        // choice of the character select
             let choosen = player.selectCharacter()
-    // Apparition du coffre
-            // variable de probabilité
+    // Chest spawn
+            // probability of the spawning chest
         let probability = arc4random_uniform(UInt32(4))
-            // apparition du coffre selon la probabilité
+            // if probability is happening, the chest spawn
         if probability == UInt32(1) {
             
             chestSpawn(character: choosen, weaponInTheChest: chest.gettingObjectFromChest(character : choosen))
         }
-        // vérification si un mage ou non
-            // cas du mage
+        // checking if it the selected is a Mage
+            // case of the Mage
         if let mage = choosen as? Mage {
             // print de son équipe a soigner
             print("select the player you want to heal")
@@ -65,14 +65,13 @@ class Game{
             mage.atkfunction(target: healCharacter)
             print("\(healCharacter.name) as been healed by \(mage.strenghtAtk) lifepoint from \(mage.name)")
             }
-            // cas non mage
+            // if not a Mage
         else{
             print("There's Unwanted ennemy ! Wich enemy you want to kill it first ?")
-            // la personne choisis le personnage à cibler
+            // The player choose the ennemy to target
             let ennemytargetted = ennemyPlayer.selectCharacter()
-                    //le personnage choisis attaque donc le personnage cibler
+                    //The selected character by the player attack the ennemy
                     choosen.atkfunction(target: ennemytargetted)
-// a ajouter les stats de l'arme sur les dégats subis, ici compter seulement les dégats de base du personnage
                     print("\(String(describing: ennemytargetted.name)) taken \(choosen.strenghtAtk+choosen.weaponequiped.stats) damage and have now \(String(describing: ennemytargetted.lifepoint))")
                     ennemytargetted.isUnderZeroLifepoint(player: ennemyPlayer, character: ennemytargetted)
                     }
