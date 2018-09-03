@@ -12,7 +12,8 @@ public class Player {
     var name : String = ""
     var listOfCharacter : [Character] = []
     static var namecheckavailaible : [String] = []
-    
+    var damageDoneByPlayer : Int = 0
+    var healDoneByPlayer : Int = 0
     
     func addNamePlayer () {
         print("Hello new player. Select your name")
@@ -34,7 +35,7 @@ public class Player {
         }
     }
     
-    
+    // function to choose character to the player team
     func pickingCharacter(){
         // Menu for choosing Character
         print("Which character you want to choose in your rank, \(self.name) ?"
@@ -102,6 +103,7 @@ public class Player {
             print("Your team is now ready for a fight !")
         }
     
+    // function to select a character from a team
     func selectCharacter() -> Character{
         let selected = false
         print("Select character by is name")
@@ -122,6 +124,7 @@ public class Player {
         }
         
     }
+        // function to check if the written character by the player exist in the team
         func getcharacter (player : Player, character : String) -> Character?{
          var numberchecklist = 0
             for _ in player.listOfCharacter{

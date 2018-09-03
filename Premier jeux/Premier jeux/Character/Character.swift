@@ -12,11 +12,12 @@ class Character {
         self.strenghtAtk = strenghtAtk
         self.weaponequiped = weaponequiped
     }
-    
+
     func atkfunction (target: Character){
         target.lifepoint -= self.strenghtAtk + weaponequiped.stats
     }
     
+    // function if the character is dead
     func isUnderZeroLifepoint(player : Player, character : Character) {
         
         if character.lifepoint <= 0 {

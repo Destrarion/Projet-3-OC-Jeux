@@ -12,6 +12,7 @@ class Game{
     var listOfPlayer : [Player] = []
     var gameEnd = false
     
+    //function to start the game
     func startingGame() {
         print("Hello world!")
         teamCreation()
@@ -19,6 +20,7 @@ class Game{
         turnPerTurn(player1: listOfPlayer[0], player2: listOfPlayer[1])
     }
     
+    // function to create the team of the player
     func teamCreation(){
        let player = Player()
         player.addNamePlayer()
@@ -28,6 +30,8 @@ class Game{
     
     func turnPerTurn(player1 : Player, player2 : Player){
         var gameEnd = false
+        // variable for statistic
+        var countTurn : Int = 0
         while gameEnd == false{
             attack2(player: player1, ennemyPlayer: player2)
             if player1.listOfCharacter.count == 0 || player2.listOfCharacter.count == 0 {
@@ -41,6 +45,24 @@ class Game{
                 print("Game Over")
                 break
             }
+            countTurn += 1
+        }
+        // Announce the winner that won the game
+        if gameEnd == true{
+            if player1.listOfCharacter.count == 0 {
+                print("\(player2.name) as won !")
+            }
+            if player2.listOfCharacter.count == 0 {
+                print("\(player1.name) as won !")
+            }
+            
+            // constant for the calculating statistic of difference of damage between the 2 player
+           let damageDifferencePercentage = player1.damageDoneByPlayer / player2.damageDoneByPlayer * 100
+            print("Statistic done in the game :"
+                + "\n Total of turn : \(countTurn)"
+                + "\n Total of damage done by \(player1.name): \(player1.damageDoneByPlayer)"
+                + "\n Total of damage done by \(player2.name): \(player2.damageDoneByPlayer)"
+                + "\n Difference between damage of both player: \(damageDifferencePercentage)")
         }
     }
     
@@ -63,6 +85,7 @@ class Game{
             print("select the player you want to heal")
             let healCharacter = player.selectCharacter()
             mage.atkfunction(target: healCharacter)
+            player.healDoneByPlayer += choosen.strenghtAtk + choosen.weaponequiped.stats
             print("\(healCharacter.name) as been healed by \(mage.strenghtAtk) lifepoint from \(mage.name)")
             }
             // if not a Mage
@@ -72,12 +95,13 @@ class Game{
             let ennemytargetted = ennemyPlayer.selectCharacter()
                     //The selected character by the player attack the ennemy
                     choosen.atkfunction(target: ennemytargetted)
+                    player.damageDoneByPlayer += choosen.strenghtAtk + choosen.weaponequiped.stats
                     print("\(String(describing: ennemytargetted.name)) taken \(choosen.strenghtAtk+choosen.weaponequiped.stats) damage and have now \(String(describing: ennemytargetted.lifepoint))")
                     ennemytargetted.isUnderZeroLifepoint(player: ennemyPlayer, character: ennemytargetted)
                     }
             }
     func chestSpawn (character : Character, weaponInTheChest : Weapon){
-                
+        // When the chest spawn, it inform the player if he want to equip the weapon to his selected character
         print("We've found \(weaponInTheChest.name)with \(weaponInTheChest.stats) stats in the chest !")
         print("Did you want to equip to your character ? Actual weapon equiped : \(character.weaponequiped.name) stats : \(character.weaponequiped.stats)")
         if let answer = readLine(){
