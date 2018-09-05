@@ -37,12 +37,14 @@ class Game{
             if player1.listOfCharacter.count == 0 || player2.listOfCharacter.count == 0 {
                 gameEnd = true
                 print("Game Over")
+                countTurn += 1
                 break
             }
             attack2(player: player2, ennemyPlayer: player1)
             if player1.listOfCharacter.count == 0 || player2.listOfCharacter.count == 0 {
                 gameEnd = true
                 print("Game Over")
+                countTurn += 1
                 break
             }
             countTurn += 1
@@ -57,12 +59,29 @@ class Game{
             }
             
             // constant for the calculating statistic of difference of damage between the 2 player
-           let damageDifferencePercentage = player1.damageDoneByPlayer / player2.damageDoneByPlayer * 100
-            print("Statistic done in the game :"
-                + "\n Total of turn : \(countTurn)"
-                + "\n Total of damage done by \(player1.name): \(player1.damageDoneByPlayer)"
-                + "\n Total of damage done by \(player2.name): \(player2.damageDoneByPlayer)"
-                + "\n Difference between damage of both player: \(damageDifferencePercentage)")
+            
+            
+            let damageDoneByPlayer1Float : Float = Float(player1.damageDoneByPlayer)
+            let damageDoneByPlayer2Float : Float = Float(player2.damageDoneByPlayer)
+            var damageDifferencePercentage: Float = 0
+            
+            if damageDoneByPlayer1Float < damageDoneByPlayer2Float{
+                let damageDifferencePercentageIf1: Float = (damageDoneByPlayer1Float / damageDoneByPlayer2Float) * 100
+                damageDifferencePercentage = damageDifferencePercentageIf1
+            }else{
+                let damageDifferencePercentageIf2: Float = (damageDoneByPlayer2Float / damageDoneByPlayer1Float) * 100
+                damageDifferencePercentage = damageDifferencePercentageIf2
+            }
+            
+            print("""
+                Statistic done in the game :
+                Total of turn : \(countTurn)
+                Total of damage done by \(player1.name): \(player1.damageDoneByPlayer)
+                Total of damage done by \(player2.name): \(player2.damageDoneByPlayer)
+                Difference between damage of both player: \(damageDifferencePercentage)‰
+                Total of healing done by \(player1.name): \(player1.healDoneByPlayer)
+                Total of healing done by \(player2.name): \(player2.healDoneByPlayer)
+                """)
         }
     }
     
@@ -70,7 +89,7 @@ class Game{
         print("\(player.name), It's your turn to play ")
         // choice of the character select
             let choosen = player.selectCharacter()
-    // Chest spawn
+        // Chest spawn
             // probability of the spawning chest
         let probability = arc4random_uniform(UInt32(4))
             // if probability is happening, the chest spawn
@@ -81,7 +100,7 @@ class Game{
         // checking if it the selected is a Mage
             // case of the Mage
         if let mage = choosen as? Mage {
-            // print de son équipe a soigner
+            // print of teh team to heal
             print("select the player you want to heal")
             let healCharacter = player.selectCharacter()
             mage.atkfunction(target: healCharacter)

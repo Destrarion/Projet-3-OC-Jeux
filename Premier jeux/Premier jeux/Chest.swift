@@ -8,7 +8,7 @@
 
 import Foundation
 
-// classe impactant le coffre avant le combat
+// class for the chest
 class Chest {
     static let allWeapon : [Weapon] = [axeOfTheMountain,swordOfThunder,staffOfTheHeaven]
     var weaponlooted : Weapon
