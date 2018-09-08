@@ -59,8 +59,6 @@ class Game{
             }
             
             // constant for the calculating statistic of difference of damage between the 2 player
-            
-            
             let damageDoneByPlayer1Float : Float = Float(player1.damageDoneByPlayer)
             let damageDoneByPlayer2Float : Float = Float(player2.damageDoneByPlayer)
             var damageDifferencePercentage: Float = 0
@@ -72,6 +70,18 @@ class Game{
                 let damageDifferencePercentageIf2: Float = (damageDoneByPlayer2Float / damageDoneByPlayer1Float) * 100
                 damageDifferencePercentage = damageDifferencePercentageIf2
             }
+            // Constant for the calculating statistic for difference of healing between the 2 player
+            let healingDoneByPlayer1Float : Float = Float(player1.damageDoneByPlayer)
+            let healingDoneByPlayer2Float : Float = Float(player2.damageDoneByPlayer)
+            var healingDifferencePercentage: Float = 0
+            
+            if healingDoneByPlayer1Float < healingDoneByPlayer2Float{
+                let healingDifferencePercentageIf1: Float = (healingDoneByPlayer1Float / healingDoneByPlayer2Float) * 100
+                healingDifferencePercentage = healingDifferencePercentageIf1
+            }else{
+                let healingDifferencePercentageIf2: Float = (healingDoneByPlayer2Float / healingDoneByPlayer1Float) * 100
+                healingDifferencePercentage = healingDifferencePercentageIf2
+            }
             
             print("""
                 Statistic done in the game :
@@ -81,6 +91,7 @@ class Game{
                 Difference between damage of both player: \(damageDifferencePercentage)‰
                 Total of healing done by \(player1.name): \(player1.healDoneByPlayer)
                 Total of healing done by \(player2.name): \(player2.healDoneByPlayer)
+                Difference between healing of both player : \(healingDifferencePercentage)
                 """)
         }
     }
