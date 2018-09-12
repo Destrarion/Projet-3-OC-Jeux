@@ -10,6 +10,7 @@ import Foundation
 
 // class for the chest
 class Chest {
+    var chestSpawnCount : Int = 0
     static let allWeapon : [Weapon] = [axeOfTheMountain,swordOfThunder,staffOfTheHeaven]
     var weaponlooted : Weapon
     

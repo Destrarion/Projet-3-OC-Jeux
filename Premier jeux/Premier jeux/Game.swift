@@ -33,14 +33,14 @@ class Game{
         // variable for statistic
         var countTurn : Int = 0
         while gameEnd == false{
-            attack2(player: player1, ennemyPlayer: player2)
+            attack(player: player1, ennemyPlayer: player2)
             if player1.listOfCharacter.count == 0 || player2.listOfCharacter.count == 0 {
                 gameEnd = true
                 print("Game Over")
                 countTurn += 1
                 break
             }
-            attack2(player: player2, ennemyPlayer: player1)
+            attack(player: player2, ennemyPlayer: player1)
             if player1.listOfCharacter.count == 0 || player2.listOfCharacter.count == 0 {
                 gameEnd = true
                 print("Game Over")
@@ -71,8 +71,8 @@ class Game{
                 damageDifferencePercentage = damageDifferencePercentageIf2
             }
             // Constant for the calculating statistic for difference of healing between the 2 player
-            let healingDoneByPlayer1Float : Float = Float(player1.damageDoneByPlayer)
-            let healingDoneByPlayer2Float : Float = Float(player2.damageDoneByPlayer)
+            let healingDoneByPlayer1Float : Float = Float(player1.healDoneByPlayer)
+            let healingDoneByPlayer2Float : Float = Float(player2.healDoneByPlayer)
             var healingDifferencePercentage: Float = 0
             
             if healingDoneByPlayer1Float < healingDoneByPlayer2Float{
@@ -86,17 +86,18 @@ class Game{
             print("""
                 Statistic done in the game :
                 Total of turn : \(countTurn)
+                Total of chest spawned in the game : \(chest.chestSpawnCount)
                 Total of damage done by \(player1.name): \(player1.damageDoneByPlayer)
                 Total of damage done by \(player2.name): \(player2.damageDoneByPlayer)
                 Difference between damage of both player: \(damageDifferencePercentage)‰
                 Total of healing done by \(player1.name): \(player1.healDoneByPlayer)
                 Total of healing done by \(player2.name): \(player2.healDoneByPlayer)
-                Difference between healing of both player : \(healingDifferencePercentage)
+                Difference between healing of both player : \(healingDifferencePercentage) %
                 """)
         }
     }
     
-    func attack2(player : Player, ennemyPlayer : Player){
+    func attack(player : Player, ennemyPlayer : Player){
         print("\(player.name), It's your turn to play ")
         // choice of the character select
             let choosen = player.selectCharacter()
@@ -107,6 +108,7 @@ class Game{
         if probability == UInt32(1) {
             
             chestSpawn(character: choosen, weaponInTheChest: chest.gettingObjectFromChest(character : choosen))
+            chest.chestSpawnCount += 1
         }
         // checking if it the selected is a Mage
             // case of the Mage
